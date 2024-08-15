@@ -1,0 +1,301 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-image: url(/src/assets/img/desktopBGLight.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #fff;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+li {
+  list-style: none;
+  color: #494C6B;
+}
+
+ul {
+  padding: 0;
+}
+
+/* Check Box Css Start */
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #E3E4F1;
+  background-color: #fff;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  margin-right: 10px;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url('/src/assets/img/checked.svg');
+  background-size: cover;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Check Box Css End */
+
+.container {
+  margin: 0 auto;
+  width: 540px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 70px;
+  padding-bottom: 40px;
+}
+
+.hero {
+  box-shadow: 0px 35px 50px -15px #C2C3D680;
+  margin-bottom: 49px;
+}
+
+.header button {
+  border: none;
+  background-color: transparent;
+}
+
+.header button:hover {
+  border-color: transparent;
+}
+
+.createTodo {
+  background-color: #fff;
+  padding: 20px 280px 20px 24px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+
+.inputArea {
+  display: flex;
+  align-items: center;
+}
+
+.newTodo {
+  background-color: #fff;
+  color: #9495A5;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.25px;
+  border: 0px solid;
+}
+
+.todos {
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.todosItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #E3E4F1;
+  padding: 20px 24px;
+}
+
+.todosCheck {
+  display: flex;
+  align-items: center;
+}
+
+.todosItem button {
+  background-color: transparent;
+  padding: 0;
+}
+
+.todosItem button:hover {
+  border-color: transparent;
+}
+
+.todosItem li.completed {
+  color: #D1D2DA;
+  text-decoration: line-through;
+}
+
+.interactive {
+  display: none;
+}
+
+.interactiveDesktop {
+  padding-block: 16px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #9495A5;
+}
+
+.interactiveDesktop button {
+  background-color: transparent;
+  color: #9495A5;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: -0.1944444477558136px;
+  text-align: right;
+}
+
+.interactiveDesktop button:hover {
+  border-color: transparent;
+  color: #3A7CFD;
+}
+
+.completedStatusDesktop {
+  display: flex;
+  gap: 19px;
+  color: #9495A5;
+}
+
+.completedStatusDesktop button {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: -0.1944444477558136px;
+  text-align: left;
+}
+
+.copyright {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: -0.1944444477558136px;
+  padding-bottom: 52px;
+  text-align: center;
+  color: #9495A5;
+}
+
+@media (width < 768px) {
+  body {
+    background-image: url(/src/assets/img/mobileBGLight.png);
+  }
+
+  .container {
+    margin: 0 auto;
+    width: 375px;
+  }
+
+  .createTodo {
+    background-color: #fff;
+    padding: 14px 20px 14px 20px;
+    margin-top: -30px;
+  }
+
+  .hero {
+    width: 327px;
+    margin: 0 auto;
+  }
+
+  .todosItem li {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: -0.1666666716337204px;
+    text-align: left;
+    color: #494C6B;
+  }
+
+  .hero .interactive {
+    display: none;
+  }
+
+  .interactiveDesktop {
+    display: none;
+  }
+
+  .interactive {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 40px;
+    padding-block: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 35px 50px -15px #C2C3D680;
+    background-color: #fff;
+    color: #3A7CFD;
+  }
+
+  .completedStatus {
+    display: flex;
+    gap: 19px;
+    justify-content: center;
+    color: #9495A5;
+  }
+
+  .completedStatus button {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: -0.1944444477558136px;
+    text-align: left;
+    padding: 0;
+    background-color: transparent;
+    color: #9495A5;
+  }
+
+  .completedStatus button:hover {
+    border: 1px solid transparent;
+  }
+}
